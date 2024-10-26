@@ -1,0 +1,82 @@
+{
+  "$org": "ATOM Accelerator DAO",
+  "user": "josef.cosmos",
+  "logo": "/aadao/logo.svg",
+  "banner": "/aadao/banner.png",
+  "delegations": [
+    {
+      "color": "#121212",
+      "logo": "/everstake.png",
+      "name": "Everstake",
+      "staked_balance": {
+        "amount": "85.00 ATOM",
+        "usd": "378.00"
+      },
+      "rewards": {
+        "amount": "0.00 ATOM",
+        "usd": "0.00"
+      },
+      "commission": "7.0%"
+    },
+    {
+      "color": "#C71F2C",
+      "logo": "/swiss-staking.png",
+      "name": "Swiss Staking",
+      "staked_balance": {
+        "amount": "15.00 ATOM",
+        "usd": "66.71"
+      },
+      "rewards": {
+        "amount": "10.00 ATOM",
+        "usd": "44.47"
+      },
+      "commission": "5.0%"
+    },
+    {
+      "color": "#3F89EF",
+      "logo": "/keplr.png",
+      "name": "Keplr",
+      "staked_balance": {
+        "amount": "10.00 ATOM",
+        "usd": "44.47"
+      },
+      "rewards": {
+        "amount": "5.00 ATOM",
+        "usd": "22.24"
+      },
+      "commission": "10.0%"
+    },
+    {
+      "color": "#C2CBF4",
+      "logo": "/node101.png",
+      "name": "node101",
+      "staked_balance": {
+        "amount": "5.00 ATOM",
+        "usd": "22.24"
+      },
+      "rewards": {
+        "amount": "2.50 ATOM",
+        "usd": "11.12"
+      },
+      "commission": "5.0%"
+    }
+  ],
+  "governance": [
+    {
+      "id": "971",
+      "name": "Gaia v21 Software Upgrade",
+      "description": "The Gaia v21 release is a major release that will follow the standard governance process by initially submitting this post on the Cosmos Hub forum. After collecting forum feedback (~ 1 week) and adapting the proposal as required, a governance proposal will be sent to the Cosmos Hub for voting. The on-chain voting period typically lasts one week.",
+      "votes": {
+        "yes": 50,
+        "no": 25,
+        "abstain": 10,
+        "nwv": 15
+      }
+    }
+  ],
+  "article": {
+    "title": "Transparency Report 8",
+    "content": "The ATOM Accelerator DAO (AADAO) presents its eighth Transparency Report.\n\nThese reports demonstrate the team's commitment to openness, community engagement, and stakeholder education by providing clear remits of its key resources and activities.\n\nThis issue is prepared by the Elected Member of the Oversight Committee (Grace Yu), with inputs from the larger DAO contributor team. Should you have any suggestions as to how AADAO can improve the structure or content of its reporting, please send your ideas to grace@atomaccelerator.com.\n\n**Report Date**: October 15, 2024\n\n## Summary\n\n### Financial Overview:\n- Detailed balance sheets, income statements, and cash flow reports provided for main, strategy, and operational wallets across multiple blockchains.\n\n### Oversight Actions:\n- Mediated dispute between AADAO and Cosmoverse over grant payments.\n- Rejected former GM Youssef Amrani's bonus methodology proposal.\n- Investigated allegations of misconduct against Amrani, leading to his removal.\n- Conducting audits on all approved grants for resource efficiency.\n- Oversight power to invoke/exercise veto (for termination grants) pending review and ratification.\n- Comprehensive travel expense report forthcoming.\n\n### AADAO Governance Updates:\n- Reaffirmed Oversight Committee's independence from AADAO.\n- Revised removal process for Elected Oversight Member.\n- Implementing new hiring processes for key positions: Coordinator & Financial Controller.\n\n### Team Changes:\n- Youssef Amrani removed as GM.\n- Added Governance Specialist role.\n- Temporary increase in Oversight Committee working hours.\n\n### Grants & Ventures:\n- Several new grants approved, including DAODAO on Cosmos Hub and DRIP Module.\n- Update Re Auction Grant Module ($90k of $150k approved disbursed).\n- Four venture investments executed totaling $950,000.\n- Efforts to increase transparency in venture investment reporting.\n",
+    "href": "https://www.atomaccelerator.com/202410-transparency-report-8/"
+  }
+}

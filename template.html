@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-8 max-w-3xl mx-auto">
+      <div>
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex flex-col">
+            <p class="color-theme">Hello, {%user%}</p>
+            <h1 class="text-black font-bold text-3xl">Your monthly roundup</h1>
+          </div>
+          <img src="{%logo%}" alt="{%$org%}" class="h-12 w-auto" />
+        </div>
+        <img src="{%banner%}" alt="Banner" class="w-full object-fill mt-8" />
+      </div>
+      <h2 class="text-black mt-6 font-bold text-2xl">Delegations</h2>
+      <table class="w-full border-separate border-spacing-y-4">
+        <thead>
+          <tr class="text-sm !text-black/50" style="text-align: left">
+            <th></th>
+            <th class="font-normal">Staked Balance</th>
+            <th class="font-normal">Rewards</th>
+            <th class="font-normal">Commission</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for delegation in delegations %}
+          <tr>
+            <td
+              class="border-l-4 pl-5 flex flex-row items-center space-x-5"
+              style="border-color: {%delegation.color%}"
+            >
+              <img
+                src="{%delegation.logo%}"
+                alt="{%delegation.name%}"
+                class="h-10 w-10 flex-shrink-0"
+              />
+              <p class="text-black font-medium">{%delegation.name%}</p>
+            </td>
+            <td>
+              <p class="text-black font-medium">
+                {%delegation.staked_balance.amount%}
+              </p>
+              <p class="text-black/50 text-sm">
+                ${%delegation.staked_balance.usd%}
+              </p>
+            </td>
+            <td>
+              <p class="text-black font-medium">
+                {%delegation.rewards.amount%}
+              </p>
+              <p class="text-black/50 text-sm">${%delegation.rewards.usd%}</p>
+            </td>
+            <td>
+              <p class="text-black font-medium">{%delegation.commission%}</p>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <h2
+        class="text-black mt-6 pt-6 font-bold text-2xl border-t border-black/10"
+      >
+        Governance
+      </h2>
+      {% for proposal in governance %}
+      <div class="mt-6">
+        <div class="flex flex-row items-center space-x-2 text-lg font-semibold">
+          <p class="text-black/50">#{%proposal.id%}</p>
+          <p class="text-black">{%proposal.name%}</p>
+        </div>
+        <p class="text-sm text-justify mt-2">{%proposal.description%}</p>
+        <div
+          class="grid overflow-hidden h-7 text-white font-medium text-sm text-center mt-4"
+          style="grid-template-columns: {%proposal.votes.yes%}fr {%proposal.votes.no%}fr {%proposal.votes.abstain%}fr {%proposal.votes.nwv%}fr;"
+        >
+          <div class="bg-green-500 inline-flex justify-center items-center">
+            {%proposal.votes.yes%}%
+          </div>
+          <div class="bg-red-500 inline-flex justify-center items-center">
+            {%proposal.votes.no%}%
+          </div>
+          <div class="bg-gray-500 inline-flex justify-center items-center">
+            {%proposal.votes.abstain%}%
+          </div>
+          <div class="bg-purple-500 inline-flex justify-center items-center">
+            {%proposal.votes.nwv%}%
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <h2
+        class="text-black mt-8 mb-4 pt-6 font-bold text-2xl border-t border-black/10"
+      >
+        {%article.title%}
+      </h2>
+      <span id="article" class="text-sm">{md%article.content%}</span>
+      <a
+        href="{%article.href%}"
+        class="bg-blue-500 py-2 mt-4 hover:bg-blue-700 transition ease-in-out duration-75 w-full rounded-none inline-flex justify-center items-center text-white font-medium text-lg"
+      >
+        Read More
+      </a>
+    </div>
+    <style>
+      #article > h1,
+      #article > h2,
+      #article > h3,
+      #article > h4,
+      #article > h5,
+      #article > h6 {
+        font-weight: initial !important;
+        font-size: initial !important;
+      }
+      #article > h2 {
+        font-size: 1.5em !important;
+        font-weight: bold !important;
+      }
+      #article > ul,
+      ol {
+        list-style: initial !important;
+        list-style-position: inside !important;
+      }
+      #article > * {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </body>
+</html>
